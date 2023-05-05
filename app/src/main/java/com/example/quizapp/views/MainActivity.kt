@@ -15,14 +15,13 @@ class MainActivity : AppCompatActivity() {
     }
     override fun onStart() {
         super.onStart();
-        val start_button = findViewById<Button>(R.id.btn_start)
-        val user_name = findViewById<EditText>(R.id.user_name)
+        val startButton = findViewById<Button>(R.id.btn_start)
+        val userName = findViewById<EditText>(R.id.user_name)
 
-        start_button.setOnClickListener {
-            if(user_name.text.toString().isEmpty()){
+        startButton.setOnClickListener {
+            if(userName.text.toString().isEmpty()){
                 Toast.makeText(this, "Please enter your name", Toast.LENGTH_SHORT).show()
-            }
-            else {
+            } else {
                 startActivity(Intent(this, QuizQuestionsActivity::class.java))
             }
         }
